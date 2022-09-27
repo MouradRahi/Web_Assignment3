@@ -1,0 +1,12 @@
+div.game{
+    margin-top: 10%;
+    margin-left: 30%;
+	height: 524px;
+	width: 498px;
+    background-image: url("board.png");
+    background-size: 100%;
+}
+.game .position{
+    height: 172px;
+	width: 166px;
+}
