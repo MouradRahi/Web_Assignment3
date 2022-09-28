@@ -1,12 +1,26 @@
 div.game{
     margin-top: 10%;
     margin-left: 30%;
-	height: 524px;
-	width: 498px;
+	height: 550px;
+	width: 530px;
     background-image: url("board.png");
     background-size: 100%;
+    
 }
-.game .position{
-    height: 172px;
-	width: 166px;
+div.position{
+    display: inline-block;
 }
+
+.position{
+    height: 176px;
+	width: 174px;
+}
+.position.row2{
+    height: 195px;
+	width: 174px;
+}
+.position.row3{
+    height: 170px;
+	width: 174px;
+}
+
