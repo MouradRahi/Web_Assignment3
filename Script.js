@@ -6,7 +6,6 @@ let player_cpu = false;
 
 
 positions[0].addEventListener("click", () => {
-    console.log(document.getElementById("img1").src);
     if (document.getElementById("img1").src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
         if (player_cpu) {
             document.getElementById("img1").src = "red.png";
