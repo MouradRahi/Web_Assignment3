@@ -1,31 +1,41 @@
 const positions = document.querySelectorAll(".position");
 let player_cpu = false;
+const img1 = document.getElementById("img1");
+const img2 = document.getElementById("img2");
+const img3 = document.getElementById("img3");
+const img4 = document.getElementById("img4");
+const img5 = document.getElementById("img5");
+const img6 = document.getElementById("img6");
+const img7 = document.getElementById("img7");
+const img8 = document.getElementById("img8");
+const img9 = document.getElementById("img9");
 
 
 
 
 
 positions[0].addEventListener("click", () => {
-    if (document.getElementById("img1").src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
+    if (img1.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
         if (player_cpu) {
-            document.getElementById("img1").src = "red.png";
+            //img1.classList.add("animate_red");
+            img1.src = "red.png";
             player_cpu = false;
         }
         else {
-            document.getElementById("img1").src = "yellow.png";
+            img1.src = "yellow.png";
             player_cpu = true;
         }
     }
     
 });
 positions[1].addEventListener("click", () => {
-    if (document.getElementById("img2").src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
+    if (img2.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
         if (player_cpu) {
-            document.getElementById("img2").src = "red.png";
+            img2.src = "red.png";
             player_cpu = false;
         }
         else {
-            document.getElementById("img2").src = "yellow.png";
+            img2.src = "yellow.png";
             player_cpu = true;
         }
     }
@@ -33,13 +43,13 @@ positions[1].addEventListener("click", () => {
 
 
 positions[2].addEventListener("click", () => {
-    if (document.getElementById("img3").src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
+    if (img3.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
         if (player_cpu) {
-            document.getElementById("img3").src = "red.png";
+            img3.src = "red.png";
             player_cpu = false;
         }
         else {
-            document.getElementById("img3").src = "yellow.png";
+            img3.src = "yellow.png";
             player_cpu = true;
         }
     }
@@ -47,13 +57,13 @@ positions[2].addEventListener("click", () => {
 
 
 positions[3].addEventListener("click", () => {
-    if (document.getElementById("img4").src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
+    if (img4.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
         if (player_cpu) {
-            document.getElementById("img4").src = "red.png";
+            img4.src = "red.png";
             player_cpu = false;
         }
         else {
-            document.getElementById("img4").src = "yellow.png";
+            img4.src = "yellow.png";
             player_cpu = true;
         }
     }
@@ -62,13 +72,13 @@ positions[3].addEventListener("click", () => {
 
 
 positions[4].addEventListener("click", () => {
-    if (document.getElementById("img5").src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
+    if (img5.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
         if (player_cpu) {
-            document.getElementById("img5").src = "red.png";
+            img5.src = "red.png";
             player_cpu = false;
         }
         else {
-            document.getElementById("img5").src = "yellow.png";
+            img5.src = "yellow.png";
             player_cpu = true;
         }
     }
@@ -76,13 +86,13 @@ positions[4].addEventListener("click", () => {
 
 
 positions[5].addEventListener("click", () => {
-    if (document.getElementById("img6").src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
+    if (img6.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
         if (player_cpu) {
-            document.getElementById("img6").src = "red.png";
+            img6.src = "red.png";
             player_cpu = false;
         }
         else {
-            document.getElementById("img6").src = "yellow.png";
+            img6.src = "yellow.png";
             player_cpu = true;
         }
     }
@@ -90,13 +100,13 @@ positions[5].addEventListener("click", () => {
 
 
 positions[6].addEventListener("click", () => {
-    if (document.getElementById("img7").src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
+    if (img7.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
         if (player_cpu) {
-            document.getElementById("img7").src = "red.png";
+            img7.src = "red.png";
             player_cpu = false;
         }
         else {
-            document.getElementById("img7").src = "yellow.png";
+            img7.src = "yellow.png";
             player_cpu = true;
         }
     }
@@ -104,13 +114,13 @@ positions[6].addEventListener("click", () => {
 
 
 positions[7].addEventListener("click", () => {
-    if (document.getElementById("img8").src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
+    if (img8.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
         if (player_cpu) {
-            document.getElementById("img8").src = "red.png";
+            img8.src = "red.png";
             player_cpu = false;
         }
         else {
-            document.getElementById("img8").src = "yellow.png";
+            img8.src = "yellow.png";
             player_cpu = true;
         }
     }
@@ -118,13 +128,13 @@ positions[7].addEventListener("click", () => {
 
 
 positions[8].addEventListener("click", () => {
-    if (document.getElementById("img9").src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
+    if (img9.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
         if (player_cpu) {
-            document.getElementById("img9").src = "red.png";
+            img9.src = "red.png";
             player_cpu = false;
         }
         else {
-            document.getElementById("img9").src = "yellow.png";
+            img9.src = "yellow.png";
             player_cpu = true;
         }
     }

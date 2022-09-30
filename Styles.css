@@ -28,10 +28,17 @@ div.position{
 .image{
     margin-left: 5%;
 }
-@keyframes animation{
-    from {top: 0%;}
-    to {bottom: 100%;}
+@keyframes animation_red{
+    from {background-image: url("red.png"); top: 0%;}
+    to {background-image: url("red.png"); bottom: 100%;}
 }
-.animate{
-    animation-name: animation;
+@keyframes animation_yellow{
+    from {background-image: url("yellow.png"); top: 0%;}
+    to {background-image: url("yellow.png"); bottom: 100%;}
+}
+.animate_red{
+    animation-name: animation_red;
+}
+.animate_yellow{
+    animation-name: animation_yellow;
 }
