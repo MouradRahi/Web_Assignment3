@@ -13,31 +13,37 @@ const img7 = document.getElementById("img7");
 const img8 = document.getElementById("img8");
 const img9 = document.getElementById("img9");
 const wins = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
+//                0          1         2            3        4           5           6        7
 
-function winVerification(index){
-    let compare="e";
-    let temp="e";
-    let win=true;
-    
-        compare=wins[index][0];
-        temp=wins[index][0];
-        let j = 0;
-        while (j<wins[index].length && win) {
-            compare=wins[index][j];
-            if (compare!=temp){
-                win=true;
-            }
-            else{
-                win=false;
-            }
-            j++;
+function winVerification(index) {
+    let compare = "e";
+    let temp = "e";
+    let win = true;
+
+    compare = wins[index][0];
+    temp = wins[index][0];
+    let j = 0;
+    while (j < wins[index].length && win) {
+        compare = wins[index][j];
+        if (compare != temp) {
+            win = true;
         }
-    
+        else {
+            win = false;
+        }
+        j++;
+    }
+    if(win){
+        return false;
+    }
+    else{
+        return true;
+    }
 }
 
 
-document.getElementById("start").addEventListener("click",()=>{
-    game_status.innerText("Game Started "+" "+"'s move");
+document.getElementById("start").addEventListener("click", () => {
+    game_status.innerText="Game Started " + " " + "'s move";
     positions[0].addEventListener("click", () => {
         if (img1.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png" && game_state) {
             if (player_cpu) {
@@ -51,6 +57,15 @@ document.getElementById("start").addEventListener("click",()=>{
                 player_cpu = true;
                 board[0] = "x";
             }
+        }
+        if (game_state){
+            game_state=winVerification(0);
+        }
+        if (game_state){
+            game_state=winVerification(3);
+        }
+        if (game_state){
+            game_state=winVerification(6);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
     });
@@ -70,6 +85,12 @@ document.getElementById("start").addEventListener("click",()=>{
                 board[1] = "x";
             }
         }
+        if (game_state){
+            game_state=winVerification(4);
+        }
+        if (game_state){
+            game_state=winVerification(0);
+        }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
     });
 
@@ -86,6 +107,15 @@ document.getElementById("start").addEventListener("click",()=>{
                 player_cpu = true;
                 board[2] = "x";
             }
+        }
+        if (game_state){
+            game_state=winVerification(0);
+        }
+        if (game_state){
+            game_state=winVerification(5);
+        }
+        if (game_state){
+            game_state=winVerification(7);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
     });
@@ -104,6 +134,13 @@ document.getElementById("start").addEventListener("click",()=>{
                 board[3] = "x";
             }
         }
+        if (game_state){
+            game_state=winVerification(1);
+        }
+        if (game_state){
+            game_state=winVerification(3);
+        }
+
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
     });
 
@@ -120,6 +157,18 @@ document.getElementById("start").addEventListener("click",()=>{
                 player_cpu = true;
                 board[4] = "x";
             }
+        }
+        if (game_state){
+            game_state=winVerification(1);
+        }
+        if (game_state){
+            game_state=winVerification(4);
+        }
+        if (game_state){
+            game_state=winVerification(6);
+        }
+        if (game_state){
+            game_state=winVerification(7);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
     });
@@ -138,6 +187,12 @@ document.getElementById("start").addEventListener("click",()=>{
                 board[5] = "x";
             }
         }
+        if (game_state){
+            game_state=winVerification(1);
+        }
+        if (game_state){
+            game_state=winVerification(5);
+        }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
     });
 
@@ -154,6 +209,15 @@ document.getElementById("start").addEventListener("click",()=>{
                 player_cpu = true;
                 board[6] = "x";
             }
+        }
+        if (game_state){
+            game_state=winVerification(2);
+        }
+        if (game_state){
+            game_state=winVerification(3);
+        }
+        if (game_state){
+            game_state=winVerification(7);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
     });
@@ -172,6 +236,12 @@ document.getElementById("start").addEventListener("click",()=>{
                 board[7] = "x";
             }
         }
+        if (game_state){
+            game_state=winVerification(2);
+        }
+        if (game_state){
+            game_state=winVerification(4);
+        }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
     });
 
@@ -189,10 +259,19 @@ document.getElementById("start").addEventListener("click",()=>{
                 board[8] = "x";
             }
         }
+        if (game_state){
+            game_state=winVerification(2);
+        }
+        if (game_state){
+            game_state=winVerification(5);
+        }
+        if (game_state){
+            game_state=winVerification(6);
+        }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
     });
 
 });
-    
+
 
 
