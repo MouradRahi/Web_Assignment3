@@ -1,6 +1,7 @@
 const positions = document.querySelectorAll(".position");
 let player_cpu = false;
 let game_state = true;
+let turn_player="player"
 const board = ["e", "e", "e", "e", "e", "e", "e", "e", "e"];
 const game_status = document.getElementById("status");
 const img1 = document.getElementById("img1");
@@ -19,13 +20,12 @@ function winVerification(index) {
     let compare = "e";
     let temp = "e";
     let win = true;
-
     compare = wins[index][0];
     temp = wins[index][0];
     let j = 0;
     while (j < wins[index].length && win) {
         compare = wins[index][j];
-        if (compare != temp) {
+        if (board[compare] == board[temp]) {
             win = true;
         }
         else {
@@ -43,7 +43,7 @@ function winVerification(index) {
 
 
 document.getElementById("start").addEventListener("click", () => {
-    game_status.innerText="Game Started " + " " + "'s move";
+    game_status.innerText="Game Started " + turn_player+ "'s move";
     positions[0].addEventListener("click", () => {
         if (img1.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png" && game_state) {
             if (player_cpu) {
