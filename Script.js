@@ -34,7 +34,14 @@ function winVerification(index) {
         j++;
     }
     if(win){
+        if (board[temp]=="x"){
+            game_status.innerText="Yellow wins";
+        }
+        else{
+            game_status.innerText="Red wins";
+        }
         return false;
+        
     }
     else{
         return true;
@@ -43,7 +50,21 @@ function winVerification(index) {
 
 
 document.getElementById("start").addEventListener("click", () => {
-    game_status.innerText="Game Started " + turn_player+ "'s move";
+    game_status.innerText="Game Started Yellow's Move";
+    img1.src="empty.png";
+    img2.src="empty.png";
+    img3.src="empty.png";
+    img4.src="empty.png";
+    img5.src="empty.png";
+    img6.src="empty.png";
+    img7.src="empty.png";
+    img8.src="empty.png";
+    img9.src="empty.png";
+    game_state=true;
+    player_cpu=false;
+    for (let i =0 ; i<board.length;i++){
+            board[i]="e";
+    }
     positions[0].addEventListener("click", () => {
         if (img1.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png" && game_state) {
             if (player_cpu) {
