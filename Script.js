@@ -2,6 +2,7 @@ const positions = document.querySelectorAll(".position");
 let player_cpu = false;
 let game_state = true;
 const board = ["e", "e", "e", "e", "e", "e", "e", "e", "e"];
+const game_status = document.getElementById("status");
 const img1 = document.getElementById("img1");
 const img2 = document.getElementById("img2");
 const img3 = document.getElementById("img3");
@@ -11,14 +12,34 @@ const img6 = document.getElementById("img6");
 const img7 = document.getElementById("img7");
 const img8 = document.getElementById("img8");
 const img9 = document.getElementById("img9");
-const wins = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]];
+const wins = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
 
-
+function winVerification(index){
+    let compare="e";
+    let temp="e";
+    let win=true;
+    
+        compare=wins[index][0];
+        temp=wins[index][0];
+        let j = 0;
+        while (j<wins[index].length && win) {
+            compare=wins[index][j];
+            if (compare!=temp){
+                win=true;
+            }
+            else{
+                win=false;
+            }
+            j++;
+        }
+    
+}
 
 
 document.getElementById("start").addEventListener("click",()=>{
+    game_status.innerText("Game Started "+" "+"'s move");
     positions[0].addEventListener("click", () => {
-        if (img1.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
+        if (img1.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png" && game_state) {
             if (player_cpu) {
                 //img1.classList.add("animate_red");
                 img1.src = "red.png";
@@ -34,7 +55,7 @@ document.getElementById("start").addEventListener("click",()=>{
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
     });
     positions[1].addEventListener("click", () => {
-        if (img2.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
+        if (img2.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png" && game_state) {
             if (player_cpu) {
                 img2.src = "red.png";
                 player_cpu = false;
@@ -54,7 +75,7 @@ document.getElementById("start").addEventListener("click",()=>{
 
 
     positions[2].addEventListener("click", () => {
-        if (img3.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
+        if (img3.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png" && game_state) {
             if (player_cpu) {
                 img3.src = "red.png";
                 player_cpu = false;
@@ -71,7 +92,7 @@ document.getElementById("start").addEventListener("click",()=>{
 
 
     positions[3].addEventListener("click", () => {
-        if (img4.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
+        if (img4.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png" && game_state) {
             if (player_cpu) {
                 img4.src = "red.png";
                 player_cpu = false;
@@ -88,7 +109,7 @@ document.getElementById("start").addEventListener("click",()=>{
 
 
     positions[4].addEventListener("click", () => {
-        if (img5.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
+        if (img5.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png" && game_state) {
             if (player_cpu) {
                 img5.src = "red.png";
                 player_cpu = false;
@@ -105,7 +126,7 @@ document.getElementById("start").addEventListener("click",()=>{
 
 
     positions[5].addEventListener("click", () => {
-        if (img6.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
+        if (img6.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png" && game_state) {
             if (player_cpu) {
                 img6.src = "red.png";
                 player_cpu = false;
@@ -122,7 +143,7 @@ document.getElementById("start").addEventListener("click",()=>{
 
 
     positions[6].addEventListener("click", () => {
-        if (img7.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
+        if (img7.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png" && game_state) {
             if (player_cpu) {
                 img7.src = "red.png";
                 player_cpu = false;
@@ -139,7 +160,7 @@ document.getElementById("start").addEventListener("click",()=>{
 
 
     positions[7].addEventListener("click", () => {
-        if (img8.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
+        if (img8.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png" && game_state) {
             if (player_cpu) {
                 img8.src = "red.png";
                 player_cpu = false;
@@ -156,7 +177,7 @@ document.getElementById("start").addEventListener("click",()=>{
 
 
     positions[8].addEventListener("click", () => {
-        if (img9.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png") {
+        if (img9.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png" && game_state) {
             if (player_cpu) {
                 img9.src = "red.png";
                 player_cpu = false;
