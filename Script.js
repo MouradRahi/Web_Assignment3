@@ -1,7 +1,7 @@
 const positions = document.querySelectorAll(".position");
 let player_cpu = false;
 let game_state = true;
-let turn_player="player"
+let turn_player = "player"
 const board = ["e", "e", "e", "e", "e", "e", "e", "e", "e"];
 const game_status = document.getElementById("status");
 const img1 = document.getElementById("img1");
@@ -33,37 +33,37 @@ function winVerification(index) {
         }
         j++;
     }
-    if(win){
-        if (board[temp]=="x"){
-            game_status.innerText="Yellow wins";
+    if (win) {
+        if (board[temp] == "x") {
+            game_status.innerText = "Yellow wins";
         }
-        else{
-            game_status.innerText="Red wins";
+        else {
+            game_status.innerText = "Red wins";
         }
         return false;
-        
+
     }
-    else{
+    else {
         return true;
     }
 }
 
 
 document.getElementById("start").addEventListener("click", () => {
-    game_status.innerText="Game Started";
-    img1.src="empty.png";
-    img2.src="empty.png";
-    img3.src="empty.png";
-    img4.src="empty.png";
-    img5.src="empty.png";
-    img6.src="empty.png";
-    img7.src="empty.png";
-    img8.src="empty.png";
-    img9.src="empty.png";
-    game_state=true;
-    player_cpu=false;
-    for (let i =0 ; i<board.length;i++){
-            board[i]="e";
+    game_status.innerText = "Game Started";
+    img1.src = "empty.png";
+    img2.src = "empty.png";
+    img3.src = "empty.png";
+    img4.src = "empty.png";
+    img5.src = "empty.png";
+    img6.src = "empty.png";
+    img7.src = "empty.png";
+    img8.src = "empty.png";
+    img9.src = "empty.png";
+    game_state = true;
+    player_cpu = false;
+    for (let i = 0; i < board.length; i++) {
+        board[i] = "e";
     }
     positions[0].addEventListener("click", () => {
         if (img1.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png" && game_state) {
@@ -79,25 +79,25 @@ document.getElementById("start").addEventListener("click", () => {
                 board[0] = "x";
             }
         }
-        if (game_state){
-            game_state=winVerification(0);
+        if (game_state) {
+            game_state = winVerification(0);
         }
-        if (game_state){
-            game_state=winVerification(3);
+        if (game_state) {
+            game_state = winVerification(3);
         }
-        if (game_state){
-            game_state=winVerification(6);
+        if (game_state) {
+            game_state = winVerification(6);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
-        let count=0;
-        for (let k=0; k<board.length;k++){
+        let count = 0;
+        for (let k = 0; k < board.length; k++) {
 
-            if (board[count]!="e"){
+            if (board[count] != "e") {
                 count++;
             }
         }
-        if(count==9){
-            game_status.innerText="Draw";
+        if (count == 9) {
+            game_status.innerText = "Draw";
         }
     });
     positions[1].addEventListener("click", () => {
@@ -116,22 +116,22 @@ document.getElementById("start").addEventListener("click", () => {
                 board[1] = "x";
             }
         }
-        if (game_state){
-            game_state=winVerification(4);
+        if (game_state) {
+            game_state = winVerification(4);
         }
-        if (game_state){
-            game_state=winVerification(0);
+        if (game_state) {
+            game_state = winVerification(0);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
-        let count=0;
-        for (let k=0; k<board.length;k++){
+        let count = 0;
+        for (let k = 0; k < board.length; k++) {
 
-            if (board[count]!="e"){
+            if (board[count] != "e") {
                 count++;
             }
         }
-        if(count==9){
-            game_status.innerText="Draw";
+        if (count == 9) {
+            game_status.innerText = "Draw";
         }
     });
 
@@ -149,25 +149,25 @@ document.getElementById("start").addEventListener("click", () => {
                 board[2] = "x";
             }
         }
-        if (game_state){
-            game_state=winVerification(0);
+        if (game_state) {
+            game_state = winVerification(0);
         }
-        if (game_state){
-            game_state=winVerification(5);
+        if (game_state) {
+            game_state = winVerification(5);
         }
-        if (game_state){
-            game_state=winVerification(7);
+        if (game_state) {
+            game_state = winVerification(7);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
-        let count=0;
-        for (let k=0; k<board.length;k++){
+        let count = 0;
+        for (let k = 0; k < board.length; k++) {
 
-            if (board[count]!="e"){
+            if (board[count] != "e") {
                 count++;
             }
         }
-        if(count==9){
-            game_status.innerText="Draw";
+        if (count == 9) {
+            game_status.innerText = "Draw";
         }
     });
 
@@ -185,23 +185,23 @@ document.getElementById("start").addEventListener("click", () => {
                 board[3] = "x";
             }
         }
-        if (game_state){
-            game_state=winVerification(1);
+        if (game_state) {
+            game_state = winVerification(1);
         }
-        if (game_state){
-            game_state=winVerification(3);
+        if (game_state) {
+            game_state = winVerification(3);
         }
 
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
-        let count=0;
-        for (let k=0; k<board.length;k++){
+        let count = 0;
+        for (let k = 0; k < board.length; k++) {
 
-            if (board[count]!="e"){
+            if (board[count] != "e") {
                 count++;
             }
         }
-        if(count==9){
-            game_status.innerText="Draw";
+        if (count == 9) {
+            game_status.innerText = "Draw";
         }
     });
 
@@ -219,28 +219,28 @@ document.getElementById("start").addEventListener("click", () => {
                 board[4] = "x";
             }
         }
-        if (game_state){
-            game_state=winVerification(1);
+        if (game_state) {
+            game_state = winVerification(1);
         }
-        if (game_state){
-            game_state=winVerification(4);
+        if (game_state) {
+            game_state = winVerification(4);
         }
-        if (game_state){
-            game_state=winVerification(6);
+        if (game_state) {
+            game_state = winVerification(6);
         }
-        if (game_state){
-            game_state=winVerification(7);
+        if (game_state) {
+            game_state = winVerification(7);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
-        let count=0;
-        for (let k=0; k<board.length;k++){
+        let count = 0;
+        for (let k = 0; k < board.length; k++) {
 
-            if (board[count]!="e"){
+            if (board[count] != "e") {
                 count++;
             }
         }
-        if(count==9){
-            game_status.innerText="Draw";
+        if (count == 9) {
+            game_status.innerText = "Draw";
         }
     });
 
@@ -258,22 +258,22 @@ document.getElementById("start").addEventListener("click", () => {
                 board[5] = "x";
             }
         }
-        if (game_state){
-            game_state=winVerification(1);
+        if (game_state) {
+            game_state = winVerification(1);
         }
-        if (game_state){
-            game_state=winVerification(5);
+        if (game_state) {
+            game_state = winVerification(5);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
-        let count=0;
-        for (let k=0; k<board.length;k++){
+        let count = 0;
+        for (let k = 0; k < board.length; k++) {
 
-            if (board[count]!="e"){
+            if (board[count] != "e") {
                 count++;
             }
         }
-        if(count==9){
-            game_status.innerText="Draw";
+        if (count == 9) {
+            game_status.innerText = "Draw";
         }
     });
 
@@ -291,25 +291,25 @@ document.getElementById("start").addEventListener("click", () => {
                 board[6] = "x";
             }
         }
-        if (game_state){
-            game_state=winVerification(2);
+        if (game_state) {
+            game_state = winVerification(2);
         }
-        if (game_state){
-            game_state=winVerification(3);
+        if (game_state) {
+            game_state = winVerification(3);
         }
-        if (game_state){
-            game_state=winVerification(7);
+        if (game_state) {
+            game_state = winVerification(7);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
-        let count=0;
-        for (let k=0; k<board.length;k++){
+        let count = 0;
+        for (let k = 0; k < board.length; k++) {
 
-            if (board[count]!="e"){
+            if (board[count] != "e") {
                 count++;
             }
         }
-        if(count==9){
-            game_status.innerText="Draw";
+        if (count == 9) {
+            game_status.innerText = "Draw";
         }
     });
 
@@ -327,22 +327,22 @@ document.getElementById("start").addEventListener("click", () => {
                 board[7] = "x";
             }
         }
-        if (game_state){
-            game_state=winVerification(2);
+        if (game_state) {
+            game_state = winVerification(2);
         }
-        if (game_state){
-            game_state=winVerification(4);
+        if (game_state) {
+            game_state = winVerification(4);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
-        let count=0;
-        for (let k=0; k<board.length;k++){
+        let count = 0;
+        for (let k = 0; k < board.length; k++) {
 
-            if (board[count]!="e"){
+            if (board[count] != "e") {
                 count++;
             }
         }
-        if(count==9){
-            game_status.innerText="Draw";
+        if (count == 9) {
+            game_status.innerText = "Draw";
         }
     });
 
@@ -360,28 +360,44 @@ document.getElementById("start").addEventListener("click", () => {
                 board[8] = "x";
             }
         }
-        if (game_state){
-            game_state=winVerification(2);
+        if (game_state) {
+            game_state = winVerification(2);
         }
-        if (game_state){
-            game_state=winVerification(5);
+        if (game_state) {
+            game_state = winVerification(5);
         }
-        if (game_state){
-            game_state=winVerification(6);
+        if (game_state) {
+            game_state = winVerification(6);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
-        
-        let count=0;
-        for (let k=0; k<board.length;k++){
 
-            if (board[count]!="e"){
+        let count = 0;
+        for (let k = 0; k < board.length; k++) {
+
+            if (board[count] != "e") {
                 count++;
             }
         }
-        if(count==9){
-            game_status.innerText="Draw";
+        if (count == 9) {
+            game_status.innerText = "Draw";
         }
     });
 
 });
+
+function minimax(location, board, player){
+    if (location == 0 || board[location] != -99){
+        return board[location];
+    }
+    else {
+        let max_val = -infinity;
+        let min_val = infinity;
+        if (player){
+            return max_val;
+        }
+        if (player){
+            return min_val;
+        }
+    }
+}
 
