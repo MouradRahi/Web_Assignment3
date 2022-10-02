@@ -50,7 +50,7 @@ function winVerification(index) {
 
 
 document.getElementById("start").addEventListener("click", () => {
-    game_status.innerText="Game Started Yellow's Move";
+    game_status.innerText="Game Started";
     img1.src="empty.png";
     img2.src="empty.png";
     img3.src="empty.png";
@@ -89,6 +89,15 @@ document.getElementById("start").addEventListener("click", () => {
             game_state=winVerification(6);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
+        for (let k=0; k<board.length;k++){
+            let count=0;
+            if (board[count]!="e"){
+                count++;
+            }
+        }
+        if(count==9){
+            game_status.innerText="Draw";
+        }
     });
     positions[1].addEventListener("click", () => {
         if (img2.src == "http://127.0.0.1:5500/Assignment3/Web_Assignment3/empty.png" && game_state) {
@@ -113,6 +122,15 @@ document.getElementById("start").addEventListener("click", () => {
             game_state=winVerification(0);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
+        for (let k=0; k<board.length;k++){
+            let count=0;
+            if (board[count]!="e"){
+                count++;
+            }
+        }
+        if(count==9){
+            game_status.innerText="Draw";
+        }
     });
 
 
@@ -139,6 +157,15 @@ document.getElementById("start").addEventListener("click", () => {
             game_state=winVerification(7);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
+        for (let k=0; k<board.length;k++){
+            let count=0;
+            if (board[count]!="e"){
+                count++;
+            }
+        }
+        if(count==9){
+            game_status.innerText="Draw";
+        }
     });
 
 
@@ -163,6 +190,15 @@ document.getElementById("start").addEventListener("click", () => {
         }
 
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
+        for (let k=0; k<board.length;k++){
+            let count=0;
+            if (board[count]!="e"){
+                count++;
+            }
+        }
+        if(count==9){
+            game_status.innerText="Draw";
+        }
     });
 
 
@@ -192,6 +228,15 @@ document.getElementById("start").addEventListener("click", () => {
             game_state=winVerification(7);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
+        for (let k=0; k<board.length;k++){
+            let count=0;
+            if (board[count]!="e"){
+                count++;
+            }
+        }
+        if(count==9){
+            game_status.innerText="Draw";
+        }
     });
 
 
@@ -215,6 +260,15 @@ document.getElementById("start").addEventListener("click", () => {
             game_state=winVerification(5);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
+        for (let k=0; k<board.length;k++){
+            let count=0;
+            if (board[count]!="e"){
+                count++;
+            }
+        }
+        if(count==9){
+            game_status.innerText="Draw";
+        }
     });
 
 
@@ -241,6 +295,15 @@ document.getElementById("start").addEventListener("click", () => {
             game_state=winVerification(7);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
+        for (let k=0; k<board.length;k++){
+            let count=0;
+            if (board[count]!="e"){
+                count++;
+            }
+        }
+        if(count==9){
+            game_status.innerText="Draw";
+        }
     });
 
 
@@ -264,6 +327,15 @@ document.getElementById("start").addEventListener("click", () => {
             game_state=winVerification(4);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
+        for (let k=0; k<board.length;k++){
+            let count=0;
+            if (board[count]!="e"){
+                count++;
+            }
+        }
+        if(count==9){
+            game_status.innerText="Draw";
+        }
     });
 
 
@@ -290,9 +362,16 @@ document.getElementById("start").addEventListener("click", () => {
             game_state=winVerification(6);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
+        for (let k=0; k<board.length;k++){
+            let count=0;
+            if (board[count]!="e"){
+                count++;
+            }
+        }
+        if(count==9){
+            game_status.innerText="Draw";
+        }
     });
 
 });
-
-
 
