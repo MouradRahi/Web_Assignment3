@@ -89,8 +89,9 @@ document.getElementById("start").addEventListener("click", () => {
             game_state=winVerification(6);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
+        let count=0;
         for (let k=0; k<board.length;k++){
-            let count=0;
+
             if (board[count]!="e"){
                 count++;
             }
@@ -122,8 +123,9 @@ document.getElementById("start").addEventListener("click", () => {
             game_state=winVerification(0);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
+        let count=0;
         for (let k=0; k<board.length;k++){
-            let count=0;
+
             if (board[count]!="e"){
                 count++;
             }
@@ -157,8 +159,9 @@ document.getElementById("start").addEventListener("click", () => {
             game_state=winVerification(7);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
+        let count=0;
         for (let k=0; k<board.length;k++){
-            let count=0;
+
             if (board[count]!="e"){
                 count++;
             }
@@ -190,8 +193,9 @@ document.getElementById("start").addEventListener("click", () => {
         }
 
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
+        let count=0;
         for (let k=0; k<board.length;k++){
-            let count=0;
+
             if (board[count]!="e"){
                 count++;
             }
@@ -228,8 +232,9 @@ document.getElementById("start").addEventListener("click", () => {
             game_state=winVerification(7);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
+        let count=0;
         for (let k=0; k<board.length;k++){
-            let count=0;
+
             if (board[count]!="e"){
                 count++;
             }
@@ -260,8 +265,9 @@ document.getElementById("start").addEventListener("click", () => {
             game_state=winVerification(5);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
+        let count=0;
         for (let k=0; k<board.length;k++){
-            let count=0;
+
             if (board[count]!="e"){
                 count++;
             }
@@ -295,8 +301,9 @@ document.getElementById("start").addEventListener("click", () => {
             game_state=winVerification(7);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
+        let count=0;
         for (let k=0; k<board.length;k++){
-            let count=0;
+
             if (board[count]!="e"){
                 count++;
             }
@@ -327,8 +334,9 @@ document.getElementById("start").addEventListener("click", () => {
             game_state=winVerification(4);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
+        let count=0;
         for (let k=0; k<board.length;k++){
-            let count=0;
+
             if (board[count]!="e"){
                 count++;
             }
@@ -362,8 +370,10 @@ document.getElementById("start").addEventListener("click", () => {
             game_state=winVerification(6);
         }
         console.log(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
+        
+        let count=0;
         for (let k=0; k<board.length;k++){
-            let count=0;
+
             if (board[count]!="e"){
                 count++;
             }
